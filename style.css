@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+    font-family: Tahoma  , sans-serif;
+    background-color: #FFB6C1;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+	font-size: 45;
+	font-style: bold;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
