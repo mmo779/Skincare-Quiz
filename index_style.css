@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+label {
+    display: block;
+	margin-bottom: 10px;
+}
+	
+h1{
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-size: 80px;
+	font-style: italic;
+    text-align: center;
+	color: #FFB6C1;
+	margin: 0; padding: 0;
+}
+
+h2{
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-size: 30px;
+    text-align: center;
+	color: #00000;
+}
+p{
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-style: italic;
+	font-size: 35px;
+	display: block;
+	margin-bottom: 10px;
+	padding-left: 3in;
+	
+}
+
+input:not(#submitbutton){
+	margin-left: 3in;
+	font-size: 20px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 5in;
+}
+
+input:not(#submitbutton):hover{
+	border-color: rgb(255,220,210);
+}
+
+#submitbutton{
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-style: italic;
+	font-size: 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: rgb(255,225,225);
+	margin-left: 3in;
+	margin-top: .5in;
+}
+
+#submitbutton:hover{
+	border: solid;
+	border-width: 1px;
+}
