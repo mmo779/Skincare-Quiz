@@ -30,13 +30,10 @@ p{
 	font-style: italic;
 	font-size: 30px;
 	display: block;
-	margin-bottom: 10px;
-	padding-left: 3in;
 	
 }
 
 input:not(#submitbutton){
-	margin-left: 3in;
 	font-size: 20px;
 	border-top: none;
 	border-left: none;
