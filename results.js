@@ -1,28 +1,36 @@
 // Retrieve quiz results from URL parameters
 const urlParams = new URLSearchParams(window.location.search);
-const result1 = urlParams.get("q1");
-const result2 = urlParams.get("q2");
-const result3 = urlParams.get("q3");
-const result4 = urlParams.get("q4");
+const Acount = urlParams.get("q1");
+const Bcount = urlParams.get("q2");
+const Ccount = urlParams.get("q3");
+const Dcount = urlParams.get("q4");
 
-	console.log('Option A count:', result1);
-    console.log('Option B count:', result2);
-    console.log('Option C count:', result3);
-    console.log('Option D count:', result4);
-
-/*
 var finalRes;
+var error = "inconclusive";
 
 function userResult(){
-	if (result1 > result2 && result1 > result3 && result1 > result4){
-		finalRes = result1;
-	}else if (result2 > result1 && result2 > result3 && result2 > result4){
-		finalRes = result2;
-	}else if (result3 > result1 && result3 > result2 && result3 > result4){
-		finalRes = result3;
-	}else if (result4 > result1 && result4 > result2 && result4 > result3){
-		finalRes = result4;
+	if (Acount > Bcount && Acount > Ccount && Acount > Dcount){
+		finalRes = "Your skin tends to be DRY";
+	}else if (Bcount > Acount && Bcount > Ccount && Bcount > Dcount){
+		finalRes = "Your skin tends to be NORMAL but can be a little DRY at times";
+	}else if (Ccount > Acount && Ccount > Bcount && Ccount > Dcount){
+		finalRes = "Your skin tends to be NORMAL but can be a little OILY at times";
+	}else if (Dcount > Acount && Dcount > Bcount && Dcount > Ccount){
+		finalRes = "Your skin tends to be OILY and is prone to ACNE";
 	}else{
-		finalRes = 
+		finalRes = error;
 	}
-}*/
+	
+	return finalRes;
+}
+
+// Simulate a delay to show loading effect
+setTimeout(function() {
+  // Display the result on the page
+  const loadingPage = document.querySelector("h2");
+  loadingPage.innerText = "Results!";
+  
+  const resultContainer = document.getElementById("resultContainer");
+  resultContainer.style.display = "block";
+  resultContainer.innerText = userResult();
+}, 2000);
