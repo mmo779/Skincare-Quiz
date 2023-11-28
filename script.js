@@ -40,5 +40,5 @@
 	  const resultsPageUrl = `results.html?q1=${optionACount}&q2=${optionBCount}&q3=${optionCCount}&q4=${optionDCount}`;
 	  
 	  // Redirect to the results page
-	  window.location.href = resultsPageUrl;
+	  window.location.replace(resultsPageUrl);
     }
