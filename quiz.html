@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin Care Quiz</title>
+<link href="style.css" rel="stylesheet" />
+
+</head>
+<body>
+<h1>Skincare Quiz</h1>
+<h2>Take this quiz to find out your skin type!</h2>
+
+  <form id="skinCareQuiz">
+    <!-- Question 1 -->
+    <fieldset>
+      <legend>Question 1: How would you describe the level of oil on your skin?</legend>
+	  <div class= "colored-answers">
+      <label>
+        <input type="radio" name="q1" value="A"> A. No oiliness
+      </label>
+      <label>
+        <input type="radio" name="q1" value="B"> B. No oil in T zone but light oil in other areas
+      </label>
+      <label>
+        <input type="radio" name="q1" value="C"> C. Oily mostly in T zone
+      </label>
+      <label>
+        <input type="radio" name="q1" value="D"> D. Oily all over
+      </label>
+	  </div>
+    </fieldset>
+
+    <!-- Question 2 -->
+    <fieldset>
+      <legend>Question 2: How would you describe how your skin feels?</legend>
+	  <div class= "answers">
+      <label>
+        <input type="radio" name="q2" value="A"> A. Tight and itchy
+      </label>
+      <label>
+        <input type="radio" name="q2" value="B"> B. Typically healthy, occasionally tight or flaky
+      </label>
+      <label>
+        <input type="radio" name="q2" value="C"> C. Typically healthy, occasionally oily
+      </label>
+      <label>
+        <input type="radio" name="q2" value="D"> D. Overly oily
+      </label>
+	  </div>
+    </fieldset>
+
+    <!-- Question 3 -->
+    <fieldset>
+      <legend>Question 3: How would you describe the overall appearance of your skin?</legend>
+	  <div class= "colored-answers">
+      <label>
+        <input type="radio" name="q3" value="A"> A. Tight, noticeable fine lines, red or rough patches, visible flaking
+      </label>
+      <label>
+        <input type="radio" name="q3" value="B"> B. Healthy appearance, clear with even texture, some tightness or flaking
+      </label>
+      <label>
+        <input type="radio" name="q3" value="C"> C. Healthy appearance, occasional breakouts, can appear shiny
+      </label>
+      <label>
+        <input type="radio" name="q3" value="D"> D. Shiny with noticeable breakouts and blackheads
+      </label>
+	  </div>
+    </fieldset>
+
+    <!-- Question 4 -->
+    <fieldset>
+      <legend>Question 4: How would you describe your pore size?</legend>
+	  <div class= "answers">
+      <label>
+        <input type="radio" name="q4" value="A"> A. Small
+      </label>
+      <label>
+        <input type="radio" name="q4" value="B"> B. Small to Medium
+      </label>
+      <label>
+        <input type="radio" name="q4" value="C"> C. Medium to Large
+      </label>
+      <label>
+        <input type="radio" name="q4" value="D"> D. Large
+      </label>
+	  </div>
+    </fieldset>
+
+    <button type="button" onclick="submitQuiz()">Submit</button>
+  </form>
+
+  <script>
+    // Initialize global count variables for each option
+    let optionACount = 0;
+    let optionBCount = 0;
+    let optionCCount = 0;
+    let optionDCount = 0;
+
+    function submitQuiz() {
+      // Get all radio buttons in the form
+      const radioButtons = document.querySelectorAll('input[type="radio"]:checked');
+
+      // Loop through each selected radio button
+      radioButtons.forEach(radioButton => {
+        // Get the value of the selected option
+        const value = radioButton.value;
+
+        // Increment the count for the selected option
+        switch (value) {
+          case 'A':
+            optionACount++;
+            break;
+          case 'B':
+            optionBCount++;
+            break;
+          case 'C':
+            optionCCount++;
+            break;
+          case 'D':
+            optionDCount++;
+            break;
+        }
+      });
+
+      // Display the counts in the console (you can modify this part to display counts differently)
+      console.log('Option A count:', optionACount);
+      console.log('Option B count:', optionBCount);
+      console.log('Option C count:', optionCCount);
+      console.log('Option D count:', optionDCount);
+    }
+  </script>
+
+</body>
+</html>
