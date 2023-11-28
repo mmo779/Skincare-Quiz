@@ -25,11 +25,11 @@
 </form>
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-
+<script>const quizPageUrl = 'quiz.html?';</script>
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
   $('#gform').on('submit', function(e) {
-    window.location.replace("http://stackoverflow.com");
+    window.location.replace(quizPageUrl);
   });
 </script>
 
