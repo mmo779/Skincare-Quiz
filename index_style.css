@@ -1,8 +1,15 @@
 @charset "UTF-8";
 
-body {
+body{
     font-family: Arial, sans-serif;
-    margin: 20px;
+	margin: 20px;
+}
+
+/* Styles for screens smaller than 600px (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
 }
 
 label {
@@ -14,7 +21,7 @@ h1{
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 	font-size: 80px;
 	font-style: italic;
-    justify-content: center;
+	text-align: center;
 	color: #FFB6C1;
 	margin: 0; padding: 0;
 }
@@ -22,7 +29,7 @@ h1{
 h2{
 	font-family: 'Arial', 'Helvetica', sans-serif;
 	font-size: 30px;
-    justify-content: center;
+	text-align: center;
 	color: #00000;
 }
 p{

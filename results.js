@@ -6,7 +6,8 @@ const Ccount = urlParams.get("q3");
 const Dcount = urlParams.get("q4");
 
 var finalRes;
-var error = "inconclusive";
+var error = "It seems that you have unique skin! Send an email to example@gmail.com for more custom care!";
+var thankYou = "Thank you so much for taking my quiz!";
 
 function userResult(){
 	if (Acount > Bcount && Acount > Ccount && Acount > Dcount){
@@ -21,7 +22,7 @@ function userResult(){
 		finalRes = error;
 	}
 	
-	return finalRes;
+	return finalRes + '\n\n' + thankYou;
 }
 
 // Simulate a delay to show loading effect
