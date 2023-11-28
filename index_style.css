@@ -6,7 +6,7 @@ body {
 }
 
 label {
-    display: block;
+    display: flex;
 	margin-bottom: 10px;
 }
 	
@@ -30,7 +30,7 @@ p{
 	font-style: italic;
 	font-size: 30px;
 	display: block;
-	
+	justify-content: center-left;
 }
 
 input:not(#submitbutton){
@@ -52,7 +52,6 @@ input:not(#submitbutton):hover{
 	border: none;
 	border-radius: 10px;
 	background-color: rgb(255,225,225);
-	margin-left: 3in;
 	margin-top: .5in;
 }
 
