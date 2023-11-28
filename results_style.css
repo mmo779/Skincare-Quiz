@@ -30,7 +30,5 @@ h2{
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 	font-style: italic;
 	font-size: 35px;
-	display: block;
-	margin-bottom: 10px;
-	padding-left: 3in;
+	display: flex;
 }
