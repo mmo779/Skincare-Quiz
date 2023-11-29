@@ -29,12 +29,6 @@
             break;
         }
       });
-
-      /*Display the counts in the console (you can modify this part to display counts differently)
-      console.log('Option A count:', optionACount);
-      console.log('Option B count:', optionBCount);
-      console.log('Option C count:', optionCCount);
-      console.log('Option D count:', optionDCount);*/
 	  
 	  // Construct URL with answers
 	  const resultsPageUrl = `results.html?q1=${optionACount}&q2=${optionBCount}&q3=${optionCCount}&q4=${optionDCount}`;
