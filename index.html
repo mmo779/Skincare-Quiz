@@ -33,8 +33,11 @@
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
   $('#gform').on('submit', function(e) {
-	setTimeout(window.location.replace(quizPageUrl),3000);
-  });
+  e.preventDefault(); // Prevent the default form submission
+  setTimeout(function() {
+    window.location.replace(quizPageUrl);
+  }, 2000);
+});
 </script>
 
 </body></html>
