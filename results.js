@@ -6,10 +6,10 @@ const Ccount = urlParams.get("q3");
 const Dcount = urlParams.get("q4");
 
 var finalRes;
-var error = "It seems that you have unique skin! Send an email to example@gmail.com for more custom care!";
 var thankYou = "Thank you so much for taking my quiz!";
 
 function userResult(){
+	/*
 	if (Acount > Bcount && Acount > Ccount && Acount > Dcount){
 		finalRes = "Your skin tends to be DRY";
 	}else if (Bcount > Acount && Bcount > Ccount && Bcount > Dcount){
@@ -21,7 +21,18 @@ function userResult(){
 	}else{
 		finalRes = error;
 	}
-	
+	*/
+	if(Acount > 2){
+		finalRes = "Your skin tends to be DRY";
+	}else if (Bcount > 2){
+		finalRes = "Your skin tends to be NORMAL but can be a little DRY at times";
+	}else if (Ccount > 2){
+		finalRes = "Your skin tends to be NORMAL but can be a little OILY at times";
+	}else if (Dcount > 2){
+		finalRes = "Your skin tends to be OILY and is prone to ACNE";
+	}else{
+		finalRes = "It seems that you have unique skin! Send an email to example@gmail.com for more custom care!";
+	}
 	return finalRes + '\n\n' + thankYou;
 }
 
