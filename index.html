@@ -4,40 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skincare Quiz | General Information</title>
-<link href="index_style.css" rel="stylesheet" />
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link href="index_style.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
 
-<h1>Skincare Quiz</h1>
-<h2>Please enter this general information to get started!</h2>
+  <h1>Skincare Quiz</h1>
+  <h2>Please enter this general information to get started!</h2>
 
-<form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScwxYE8Bup-KnuJXPjD7MjoGkoYu8_c0f5OAp7VOs3hLWk9nQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-  <p>First name:</p>
-  <input required = "required" type="text" name="entry.1425330748" id="entry.1425330748"><br>
-  <p>Last name:</p>
-  <input required = "required"  type="text" name="entry.1642061524" id="entry.1642061524"><br>
-  <p>Email:</p>
-  <input required = "required"  type="email" name="entry.1166725684" id="entry.1166725684"><br>
-  <p>How young are you?:</p>
-  <input required = "required"  type="number" name="entry.1413939356" id="entry.1413939356"><br>
-  <p>Any targeted issues you would like to address?:</p>
-  <p>(Fine lines & wrinkles, Hyper pigmentation, Dark circles, Rosacea, etc.)</p>
-  <input required = "required"  type="text" name="entry.418363325" id="entry.418363325"><br>
-  <input id = "submitbutton" type="submit" value="Take the Quiz!">
-</form>
+  <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScwxYE8Bup-KnuJXPjD7MjoGkoYu8_c0f5OAp7VOs3hLWk9nQ/formResponse?" target="hidden_iframe">
+    <p>First name:</p>
+    <input required="required" type="text" name="entry.1425330748" id="entry.1425330748"><br>
+    <p>Last name:</p>
+    <input required="required" type="text" name="entry.1642061524" id="entry.1642061524"><br>
+    <p>Email:</p>
+    <input required="required" type="email" name="entry.1166725684" id="entry.1166725684"><br>
+    <p>How young are you?:</p>
+    <input required="required" type="number" name="entry.1413939356" id="entry.1413939356"><br>
+    <p>Any targeted issues you would like to address?:</p>
+    <p>(Fine lines & wrinkles, Hyper pigmentation, Dark circles, Rosacea, etc.)</p>
+    <input required="required" type="text" name="entry.418363325" id="entry.418363325"><br>
+    <input id="submitbutton" type="submit" value="Take the Quiz!">
+  </form>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:block;" onload="if(submitted) {}"></iframe>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:block;" onload="checkSubmission()"></iframe>
 
-<script>const quizPageUrl = 'quiz.html?';</script>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-  $('#gform').on('submit', function(e) {
-  e.preventDefault(); // Prevent the default form submission
-  /*setTimeout(function() {
-    window.location.replace(quizPageUrl);
-  }, 4000);*/
-});
-</script>
+  <script>
+    const quizPageUrl = 'quiz.html?';
+    var submitted = false;
 
-</body></html>
+    $('#gform').on('submit', function (e) {
+      e.preventDefault(); // Prevent the default form submission
+      submitted = true; // Set submitted to true before submitting
+      this.submit();
+    });
+
+    function checkSubmission() {
+      if (submitted) {
+        // Redirect to the next page
+        window.location.replace(quizPageUrl);
+      }
+    }
+  </script>
+
+</body>
+</html>
