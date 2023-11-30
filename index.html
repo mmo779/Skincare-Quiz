@@ -14,9 +14,9 @@
 
   <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScwxYE8Bup-KnuJXPjD7MjoGkoYu8_c0f5OAp7VOs3hLWk9nQ/formResponse?" target="hidden_iframe">
     <p>First name:</p>
-    <input required="required" type="text" name="entry.1425330748" id="entry.1425330748"><br>
+    <input required="required" type="text" name="entry.1425330748" id="entry.1425330748" pattern="[A-Za-z]+" title="Only letters are allowed"><br>
     <p>Last name:</p>
-    <input required="required" type="text" name="entry.1642061524" id="entry.1642061524"><br>
+    <input required="required" type="text" name="entry.1642061524" id="entry.1642061524" pattern="[A-Za-z]+" title="Only letters are allowed"><br>
     <p>Email:</p>
     <input required="required" type="email" name="entry.1166725684" id="entry.1166725684"><br>
     <p>How young are you?:</p>
@@ -27,7 +27,7 @@
     <input id="submitbutton" type="submit" value="Take the Quiz!">
   </form>
 
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:block;" onload="checkSubmission()"></iframe>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="checkSubmission()"></iframe>
 
   <script>
     const quizPageUrl = 'quiz.html?';
