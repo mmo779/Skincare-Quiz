@@ -37,18 +37,18 @@ fieldset{
 	display: block;
 }
 
-#submitbutton{
+#submitButton{
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 	font-style: italic;
 	font-size: 30px;
-	border: none;
+   color:black;
+   border:none;
 	border-radius: 10px;
-	background-color: rgb(255,225,225);
-	margin-top: .5in;
+	background-color: #FEC5E5;
 }
 
-#submitbutton:hover{
+#submitButton:hover{
 	border: solid;
+   border-color:black;
 	border-width: 2px;
-
 }

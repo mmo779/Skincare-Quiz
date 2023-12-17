@@ -56,14 +56,16 @@ input:not(#submitbutton):hover{
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 	font-style: italic;
 	font-size: 30px;
+   color:black;
 	border: none;
 	border-radius: 10px;
-	background-color: rgb(255,225,225);
+	background-color: #FEC5E5;
 	margin-top: .5in;
 }
 
 #submitbutton:hover{
 	border: solid;
+   border-color:black;
 	border-width: 2px;
 
 }
