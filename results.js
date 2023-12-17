@@ -31,7 +31,7 @@ function userResult(){
 	}else if (Dcount > 2){
 		finalRes = "Your skin tends to be OILY and is prone to ACNE";
 	}else{
-		finalRes = "It seems that you have unique skin! Send an email to example@gmail.com for more custom care!";
+		finalRes = "It seems that you have unique skin! Send an email to shanonlb@gmail.com for more custom care!";
 	}
 	return finalRes + '\n\n' + thankYou;
 }
