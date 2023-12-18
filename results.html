@@ -15,6 +15,19 @@
 <!-- Add a div to display the result -->
 <div class = "results" id="resultContainer"></div>
 
+<form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScY6NKTDUz44W5sK2GmCV0sZq9DDQOs3nMe3d0R27Dbvsa0IA/formResponse?" target="hidden_iframe">
+    <input value="" required="required" type="text" name="entry.505097829" id="entry.505097829" type ="hidden"><br>
+</form>
+
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:block;"></iframe>
+  
+  <script>
+    $('#gform').on('submit', function (e) {
+      e.preventDefault(); // Prevent the default form submission
+      //this.submit();
+    });
+  </script>
+
 <script src="results.js"></script>
 
 </body></html>

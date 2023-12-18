@@ -9,19 +9,6 @@ var finalRes;
 var thankYou = "Thank you so much for taking my quiz!";
 
 function userResult(){
-	/*
-	if (Acount > Bcount && Acount > Ccount && Acount > Dcount){
-		finalRes = "Your skin tends to be DRY";
-	}else if (Bcount > Acount && Bcount > Ccount && Bcount > Dcount){
-		finalRes = "Your skin tends to be NORMAL but can be a little DRY at times";
-	}else if (Ccount > Acount && Ccount > Bcount && Ccount > Dcount){
-		finalRes = "Your skin tends to be NORMAL but can be a little OILY at times";
-	}else if (Dcount > Acount && Dcount > Bcount && Dcount > Ccount){
-		finalRes = "Your skin tends to be OILY and is prone to ACNE";
-	}else{
-		finalRes = error;
-	}
-	*/
 	if(Acount > 2){
 		finalRes = "Your skin tends to be DRY";
 	}else if (Bcount > 2){
@@ -33,6 +20,7 @@ function userResult(){
 	}else{
 		finalRes = "It seems that you have unique skin! Send an email to shanonlb@gmail.com for more custom care!";
 	}
+	
 	return finalRes + '\n\n' + thankYou;
 }
 
@@ -45,4 +33,14 @@ setTimeout(function() {
   const resultContainer = document.getElementById("resultContainer");
   resultContainer.style.display = "block";
   resultContainer.innerText = userResult();
+  
+  // Calculate the quiz results
+  const resultText = finalRes;
+  
+  // Set finalRes as the default value of the hidden input element
+  const hiddenInputElement = document.getElementById("entry.505097829");
+  hiddenInputElement.value = resultText;
+  // Submit the form programmatically
+  document.getElementById("gform").submit();
+	
 }, 2000);
