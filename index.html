@@ -30,18 +30,20 @@
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="checkSubmission()"></iframe>
 
   <script>
+	//Get the users name for the final results
+	let name;
+	
+	const quizPageUrl = 'quiz.html';
+	let ext;
+	
     var submitted = false;
 
      $(document).ready(function() {
       $('#gform').on('submit', function (e) {
         e.preventDefault(); // Prevent the default form submission
         submitted = true; // Set submitted to true before submitting
-		
-		//Get the users name for the final results
-		const name = document.getElementById('entry.1425330748').value;
-		const quizPageUrl = 'quiz.html?name=' + encodeURIComponent(name);
-		/**************************************************************/
-		
+		name = document.getElementById('entry.1425330748').value;
+		ext = '?name=' + encodeURIComponent(name);
         this.submit();
       });
     });
@@ -49,7 +51,7 @@
     function checkSubmission() {
       if (submitted) {
         // Redirect to the next page
-        window.location.replace(quizPageUrl);
+        window.location.replace(quizPageUrl + ext);
       }
     }
   </script>

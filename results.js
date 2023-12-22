@@ -40,12 +40,12 @@ setTimeout(function() {
   const resultText = finalRes;
   
   // Set finalRes as the default value of the hidden input element
-  const hiddenInputElement = document.getElementById("entry.505097829");
-  hiddenInputElement.value = resultText;
+  const hiddenInputElement1 = document.getElementById("entry.505097829");
+  hiddenInputElement1.value = resultText;
   
   //Set the name
-  const hiddenInputElement = document.getElementById("entry.335922090");
-  hiddenInputElement.value = name;
+  const hiddenInputElement2 = document.getElementById("entry.335922090");
+  hiddenInputElement2.value = name;
   
   // Submit the form programmatically
   document.getElementById("gform").submit();
