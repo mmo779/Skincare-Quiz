@@ -39,8 +39,13 @@ function submitQuiz(event) {
       }
     });
 	
+	let name;
+	try{
 	//Get the name from the URL
-	const name = urlParams.get("name");
+		name = urlParams.get("name");
+	} catch(e){
+		name = "noName";
+	}
 
     // Construct URL with answers
     const resultsPageUrl = `results.html?name=${name}&q1=${optionACount}&q2=${optionBCount}&q3=${optionCCount}&q4=${optionDCount}`;
