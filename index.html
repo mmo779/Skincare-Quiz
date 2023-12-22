@@ -30,7 +30,18 @@
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="checkSubmission()"></iframe>
 
   <script>
-    const quizPageUrl = 'quiz.html?';
+	//Get the users name for the final results
+	const name = document.getElementById('entry.1425330748').value;
+
+	try {
+        // Try to use localStorage
+        sessionStorage.setItem('name', name);
+    } catch (e) {
+        // sessionStorage is not available or allowed, use query parameters as a fallback
+        const quizPageUrl = 'quiz.html?userInput=' + encodeURIComponent(name);
+    }
+	/**************************************************************/
+	
     var submitted = false;
 
      $(document).ready(function() {
