@@ -27,7 +27,7 @@
     <input id="submitbutton" type="submit" value="Take the Quiz!">
   </form>
 
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="checkSubmission()"></iframe>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
   <script>
     const quizPageUrl = 'quiz.html?';
@@ -35,9 +35,14 @@
 
     $('#gform').on('submit', function (e) {
       e.preventDefault(); // Prevent the default form submission
-      submitted = true; // Set submitted to true before submitting
       this.submit();
+	  //submitted = true; // Set submitted to true before submitting
     });
+	
+	document.getElementById('hidden_iframe').onload = function () {
+    submitted = true; // Set submitted to true after the form is successfully submitted
+    checkSubmission();
+  };
 
     function checkSubmission() {
       if (submitted) {
