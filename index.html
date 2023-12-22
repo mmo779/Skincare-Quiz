@@ -32,14 +32,7 @@
   <script>
 	//Get the users name for the final results
 	const name = document.getElementById('entry.1425330748').value;
-
-	try {
-        // Try to use localStorage
-        sessionStorage.setItem('name', name);
-    } catch (e) {
-        // sessionStorage is not available or allowed, use query parameters as a fallback
-        const quizPageUrl = 'quiz.html?userInput=' + encodeURIComponent(name);
-    }
+    const quizPageUrl = 'quiz.html?name=' + encodeURIComponent(name);
 	/**************************************************************/
 	
     var submitted = false;

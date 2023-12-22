@@ -5,6 +5,8 @@ const Bcount = urlParams.get("q2");
 const Ccount = urlParams.get("q3");
 const Dcount = urlParams.get("q4");
 
+const name = urlParams.get("name");
+
 var finalRes;
 var thankYou = "Thank you so much for taking my quiz!";
 
@@ -40,6 +42,11 @@ setTimeout(function() {
   // Set finalRes as the default value of the hidden input element
   const hiddenInputElement = document.getElementById("entry.505097829");
   hiddenInputElement.value = resultText;
+  
+  //Set the name
+  const hiddenInputElement = document.getElementById("entry.335922090");
+  hiddenInputElement.value = name;
+  
   // Submit the form programmatically
   document.getElementById("gform").submit();
 	
