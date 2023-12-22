@@ -12,7 +12,7 @@
   <h1>Skincare Quiz</h1>
   <h2>Please enter this general information to get started!</h2>
 
-  <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScwxYE8Bup-KnuJXPjD7MjoGkoYu8_c0f5OAp7VOs3hLWk9nQ/formResponse?" target="hidden_iframe" onsubmit="return getUserName()">
+  <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScwxYE8Bup-KnuJXPjD7MjoGkoYu8_c0f5OAp7VOs3hLWk9nQ/formResponse?" target="hidden_iframe">
     <p>First name:</p>
     <input required="required" type="text" name="entry.1425330748" id="entry.1425330748" pattern="[A-Za-z]+" title="Only letters are allowed"><br>
     <p>Last name:</p>
@@ -32,14 +32,19 @@
   <script>
     var submitted = false;
 
-    function getUserName() {
-      // Get the users name for the final results
-      const name = document.getElementById('entry.1425330748').value;
-      const quizPageUrl = 'quiz.html?name=' + encodeURIComponent(name);
-
-      submitted = true; // Set submitted to true before submitting
-      return true; // Continue with the form submission
-    }
+     $(document).ready(function() {
+      $('#gform').on('submit', function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        submitted = true; // Set submitted to true before submitting
+		
+		//Get the users name for the final results
+		const name = document.getElementById('entry.1425330748').value;
+		const quizPageUrl = 'quiz.html?name=' + encodeURIComponent(name);
+		/**************************************************************/
+		
+        this.submit();
+      });
+    });
 
     function checkSubmission() {
       if (submitted) {
