@@ -156,10 +156,10 @@ function getRes(event) {
 	finalCount = optionACount + (optionBCount * 2) + (optionCCount * 3) + (optionDCount * 4);
 	
 	if(finalCount == 5){
-		link1 ='https://web.senegence.com/en_us/3045c-3-in-1-cleanser-dry.html';
-		link2 ='https://web.senegence.com/en_us/3005c-daytime-moisturizer-dry.html';
-		link3 ='https://web.senegence.com/en_us/3025c-evening-moisturizer-dry.html';
-      kitLink = 'https://web.senegence.com/en_us/set9052-dry-skincare-regimen-set.html';
+		link1 ='https://web.senegence.com/en_us/3045c-3-in-1-cleanser-dry.html?distributor_id=737819';
+		link2 ='https://web.senegence.com/en_us/3005c-daytime-moisturizer-dry.html?distributor_id=737819';
+		link3 ='https://web.senegence.com/en_us/3025c-evening-moisturizer-dry.html?distributor_id=737819';
+      kitLink = 'https://web.senegence.com/en_us/set9052-dry-skincare-regimen-set.html?distributor_id=737819';
       
       ank1.href = link1;
       ank2.href = link2;
@@ -203,10 +203,10 @@ function getRes(event) {
 		
 		imageShown = "dry_skincare-6.jpg";
 	}else if (finalCount >= 6 && finalCount <= 10){
-		link1 ='https://web.senegence.com/en_us/3040d-3-in-1-cleanser-normal-to-dry.html';
-		link2 ='https://web.senegence.com/en_us/3000e-daytime-moisturizer-normal-to-dry.html';
-		link3 ='https://web.senegence.com/en_us/3020c-evening-moisturizer-normal-to-dry.html';
-      kitLink = 'https://web.senegence.com/en_us/set9051-normal-dry-skincare-regimen-set.html';
+		link1 ='https://web.senegence.com/en_us/3040d-3-in-1-cleanser-normal-to-dry.html?distributor_id=737819';
+		link2 ='https://web.senegence.com/en_us/3000e-daytime-moisturizer-normal-to-dry.html?distributor_id=737819';
+		link3 ='https://web.senegence.com/en_us/3020c-evening-moisturizer-normal-to-dry.html?distributor_id=737819';
+      kitLink = 'https://web.senegence.com/en_us/set9051-normal-dry-skincare-regimen-set.html?distributor_id=737819';
       
       ank1.href = link1;
       ank2.href = link2;
@@ -249,10 +249,10 @@ function getRes(event) {
 		
 		imageShown = "dry_skincare-27.jpg";
 	}else if (finalCount >= 11 && finalCount <= 15){
-		link1 ='https://web.senegence.com/en_us/3050d-3-in-1-cleanser-normal-to-oily.html';
-		link2 ='https://web.senegence.com/en_us/3010c-daytime-moisturizer-normal-to-oily.html';
-		link3 ='https://web.senegence.com/en_us/3030c-evening-moisturizer-normal-to-oily.html';
-      kitLink = 'https://web.senegence.com/en_us/set9053-normal-oily-skincare-regimen-set.html';
+		link1 ='https://web.senegence.com/en_us/3050d-3-in-1-cleanser-normal-to-oily.html?distributor_id=737819';
+		link2 ='https://web.senegence.com/en_us/3010c-daytime-moisturizer-normal-to-oily.html?distributor_id=737819';
+		link3 ='https://web.senegence.com/en_us/3030c-evening-moisturizer-normal-to-oily.html?distributor_id=737819';
+      kitLink = 'https://web.senegence.com/en_us/set9053-normal-oily-skincare-regimen-set.html?distributor_id=737819';
       
       ank1.href = link1;
       ank2.href = link2;
@@ -296,10 +296,10 @@ function getRes(event) {
 		
 		imageShown = "normaltodry_lifestyle_set-1.jpg";
 	}else if (finalCount >= 16 && finalCount <= 20){
-		link1 ='https://web.senegence.com/en_us/3053a-3-in-1-cleanser-oily-to-acne.html';
-		link2 ='https://web.senegence.com/en_us/3015b-daytime-moisturizer-oily-to-acne.html';
-		link3 ='https://web.senegence.com/en_us/3033b-evening-moisturizer-oily-to-acne.html';
-      kitLink = 'https://web.senegence.com/en_us/set9054-oily-acne-skincare-regimen-set.html';
+		link1 ='https://web.senegence.com/en_us/3053a-3-in-1-cleanser-oily-to-acne.html?distributor_id=737819';
+		link2 ='https://web.senegence.com/en_us/3015b-daytime-moisturizer-oily-to-acne.html?distributor_id=737819';
+		link3 ='https://web.senegence.com/en_us/3033b-evening-moisturizer-oily-to-acne.html?distributor_id=737819';
+      kitLink = 'https://web.senegence.com/en_us/set9054-oily-acne-skincare-regimen-set.html?distributor_id=737819';
       
       ank1.href = link1;
       ank2.href = link2;
