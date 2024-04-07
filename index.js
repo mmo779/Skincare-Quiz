@@ -142,7 +142,7 @@ function getRes(event) {
 	var link1;
 	var link2;
 	var link3;
-	var link4 ='https://web.senegence.com/en_us/3055d-eyecreme.html';
+	var link4 ='https://web.senegence.com/en_us/3055d-eyecreme.html?distributor_id=737819';
    var kitLink;
 	
    var regimenSet;
