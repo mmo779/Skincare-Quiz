@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+*{
+	animation: fadeIn 1s;
+}
+
 body{
     font-family: Arial, sans-serif;
 	margin: 20px;
@@ -40,7 +44,11 @@ p{
 	justify-content: center-left;
 }
 
-input:not(#submitbutton){
+fieldset{
+	border: none;
+}
+
+input:not(#submitButton1):not(.answer-choice) {
 	font-size: 20px;
 	border-top: none;
 	border-left: none;
@@ -48,11 +56,78 @@ input:not(#submitbutton){
 	width: 5in;
 }
 
-input:not(#submitbutton):hover{
+input:not(#submitButton1):not(#answer-choice):hover{
 	border-color: rgb(255,220,210);
 }
 
-#submitbutton{
+.colored-answers{
+	background-color: rgb(255,225,225);
+	border-radius: 10px;
+	display: block;
+}
+
+.image-container {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 70%; /* Set the width of the container */
+    height: 200px; /* Set the height of the container */
+    overflow: hidden; /* Hide any overflow */
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    border-radius: 25px;
+}
+
+.anks:link, .anks:visited{
+	color: #FEC5E5;
+}
+
+.anks:hover{
+	color: #000000;
+}
+
+#fb-image{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	height: 35px;
+	width: 35px;
+}
+
+#after-text {
+  width: 100%; /* Ensure the text container takes up the full width */
+  max-width: 800px; /* Set a maximum width to avoid the text becoming too wide on larger screens */
+  margin: 0 auto; /* Center the text container horizontally */
+  padding: 20px; /* Add some padding to create space between the text and the container edges */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  text-align: justify; /* Justify the text to ensure it fills the width of the container */
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  font-size: 25px;
+  font-family: 'Courier New', monospace;
+}
+
+@media screen and (max-width: 600px) {
+  /* Apply specific styles for screens smaller than 600px */
+  #after-text {
+    font-size: 14px; /* Reduce the font size for smaller screens */
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	font-family: 'Courier New', monospace;
+  }
+}
+
+#skinCareQuiz {
+    display: block;
+	margin-bottom: 10px;
+}
+
+#submitButton1{
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 	font-style: italic;
 	font-size: 30px;
@@ -63,9 +138,77 @@ input:not(#submitbutton):hover{
 	margin-top: .5in;
 }
 
-#submitbutton:hover{
+#submitButton1:hover{
 	border: solid;
    border-color:black;
 	border-width: 2px;
 
 }
+
+#submitButton2{
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-style: italic;
+	font-size: 30px;
+   color:black;
+   border:none;
+	border-radius: 10px;
+	background-color: #FEC5E5;
+}
+
+#submitButton2:hover{
+	border: solid;
+   border-color:black;
+	border-width: 2px;
+}
+
+
+/*Results Style*/
+/**************************************/
+#resultsPage{
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-style: italic;
+	font-size: 35px;
+	display: flex;
+	text-align: center;
+	animation: fadeIn 3s;
+}
+
+.fade-in-image {
+  animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#resultsPage > img {
+	width: 400px;
+	height: 500px;
+	border-radius:25px;
+}
+/**************************************/

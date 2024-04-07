@@ -5,55 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Skincare Quiz | General Information</title>
   <link href="index_style.css" rel="stylesheet" />
+  <link href="results_style.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-
+<div id="genInfo">
   <h1>Skincare Quiz</h1>
   <h2>Please enter this general information to get started!</h2>
 
-  <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScwxYE8Bup-KnuJXPjD7MjoGkoYu8_c0f5OAp7VOs3hLWk9nQ/formResponse?" target="hidden_iframe">
+  <form style="display:block" name="gform" id="gform" action="https://docs.google.com/forms/d/1_p8dA4RxBlHge2rRJHeRdEJcwniPrT4MCjYaJw2MoiA/formResponse?" target="hidden_iframe">
     <p>First name:</p>
-    <input required="required" type="text" name="entry.1425330748" id="entry.1425330748" pattern="[A-Za-z]+" title="Only letters are allowed"><br>
+    <input required="required" type="text" name="entry.206538248" id="entry.206538248" pattern="[A-Za-z]+" title="Only letters are allowed"><br>
     <p>Last name:</p>
-    <input required="required" type="text" name="entry.1642061524" id="entry.1642061524" pattern="[A-Za-z]+" title="Only letters are allowed"><br>
+    <input required="required" type="text" name="entry.1038247496" id="entry.1038247496" pattern="[A-Za-z]+" title="Only letters are allowed"><br>
     <p>Email:</p>
-    <input required="required" type="email" name="entry.1166725684" id="entry.1166725684"><br>
+    <input required="required" type="email" name="entry.1314714482" id="entry.1314714482"><br>
     <p>How young are you?:</p>
-    <input required="required" type="number" name="entry.1413939356" id="entry.1413939356"><br>
+    <input required="required" type="number" name="entry.1016704801" id="entry.1016704801"><br>
     <p>Any targeted issues you would like to address?:</p>
     <p>(Fine lines & wrinkles, Hyper pigmentation, Dark circles, Rosacea, etc.)</p>
-    <input required="required" type="text" name="entry.418363325" id="entry.418363325"><br>
-    <input id="submitbutton" type="submit" value="Take the Quiz!">
-  </form>
+    <input required="required" type="text" name="entry.1794233666" id="entry.1794233666"><br>
+    <input id="submitButton1" type="submit" value="Take the Quiz!" onclick="validateForm(event)">
 
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="checkSubmission()"></iframe>
-
-  <script>
-	//Get the users name for the final results
-	let name;
-	let ext;
-	const quizPageUrl = 'quiz.html';
+</div>	
+  
+	<div id="quiz" style="display:none">
+		<h1>Skincare Quiz</h1>
+	<h2>Take this quiz to find out your skin type!</h2>
+	<div class="image-container" style="background-image: url('normaltodry_lifestyle_set-3.jpg');"></div>
+	<div id="skinCareQuiz">
+		<!-- Question 1 -->
+		<fieldset>
+		<legend>Question 1: How would you describe the level of oil on your skin?</legend>
+		<div class= "colored-answers">
+		<label>
+			<input class="answer-choice" type="radio" name="q1" value="A"> A. No oiliness
+		</label>                                 
+		<label>                                  
+			<input class="answer-choice" type="radio" name="q1" value="B"> B. No oil in T zone but light oil in other areas
+		</label>                                 
+		<label>                                  
+			<input class="answer-choice" type="radio" name="q1" value="C"> C. Oily mostly in T zone
+		</label>                                 
+		<label>                                  
+			<input class="answer-choice" type="radio" name="q1" value="D"> D. Oily all over
+		</label>
+		</div>
+		</fieldset>
 	
-    var submitted = false;
+		<!-- Question 2 -->
+		<fieldset>
+		<legend>Question 2: How would you describe how your skin feels?</legend>
+		<div class= "answers">
+		<label>
+			<input class="answer-choice" type="radio" name="q2" value="A"> A. Tight and itchy
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q2" value="B"> B. Typically healthy, occasionally tight or flaky
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q2" value="C"> C. Typically healthy, occasionally oily
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q2" value="D"> D. Overly oily
+		</label>
+		</div>
+		</fieldset>
+	
+		<!-- Question 3 -->
+		<fieldset>
+		<legend>Question 3: How would you describe the overall appearance of your skin?</legend>
+		<div class= "colored-answers">
+		<label>
+			<input class="answer-choice" type="radio" name="q3" value="A"> A. Tight, noticeable fine lines, red or rough patches, visible flaking
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q3" value="B"> B. Healthy appearance, clear with even texture, some tightness or flaking
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q3" value="C"> C. Healthy appearance, occasional breakouts, can appear shiny
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q3" value="D"> D. Shiny with noticeable breakouts and blackheads
+		</label>
+		</div>
+		</fieldset>
+	
+		<!-- Question 4 -->
+		<fieldset>
+		<legend>Question 4: How would you describe your pore size?</legend>
+		<div class= "answers">
+		<label>
+			<input class="answer-choice" type="radio" name="q4" value="A"> A. Small
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q4" value="B"> B. Small to Medium
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q4" value="C"> C. Medium to Large
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q4" value="D"> D. Large
+		</label>
+		</div>
+		</fieldset>
+		
+		<!-- Question 5 -->
+		<fieldset>
+		<legend>Question 5: How often per month do you have challenges with blemishes?</legend>
+		<div class= "colored-answers">
+		<label>
+			<input class="answer-choice" type="radio" name="q5" value="A"> A. Rarely
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q5" value="B"> B. Occasionally, usually in specific areas
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q5" value="C"> C. Frequently, especially in the 'T' zone
+		</label>                                                
+		<label>                                                 
+			<input class="answer-choice" type="radio" name="q5" value="D"> D. Persisten breakouts, sometimes severe
+		</label>
+		</div>
+		</fieldset>
+	
+		<button id="submitButton2" type="submit" onclick="getRes(event)">Submit</button>
+	</div>
+</div>
 
-     $(document).ready(function() {
-      $('#gform').on('submit', function (e) {
-        e.preventDefault(); // Prevent the default form submission
-        submitted = true; // Set submitted to true before submitting
-		name = document.getElementById('entry.1425330748').value;
-		ext = '?name=' + encodeURIComponent(name);
-        this.submit();
-      });
-    });
+<div id="resultsPage" style="display:none">
+	<a href="https://www.facebook.com/shanon.beets"  target="_blank"><img id="fb-image" src="fb_logo.png"></img></a>
+	<img id="skincare-pics" src="senegence-skincare-collection.jpg" alt="Skincare">
+	<!-- Add a div to display the result -->
+	<div class = "results" id="resultContainer"></div>
+	<pre class="product-text" id="after-text"></pre>
+</div>
+<input type="text" name="entry.1974292429" id="entry.1974292429" style="display:none">
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+</form>	
 
-    function checkSubmission() {
-      if (submitted) {
-        // Redirect to the next page
-        window.location.replace(quizPageUrl + ext);
-      }
-    }
-  </script>
-
+<script src="index.js"></script>
 </body>
 </html>
